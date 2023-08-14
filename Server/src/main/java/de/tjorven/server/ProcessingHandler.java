@@ -1,6 +1,6 @@
 package de.tjorven.server;
 
-import de.tjorven.packet.DefaultPacket;
+import de.tjorven.packet.packets.DefaultPacket;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 

@@ -1,5 +1,15 @@
-package de.tjorven.packet;
+package de.tjorven.packet.packets;
 
+import de.tjorven.packet.Packet;
+
+/**
+ * This is how a packet could look like. But I'm not completely sure about the
+ * structure of a packet yet.
+ * @see AnotherPacket
+ * @see Packet
+ *
+ * @param <T> a generic Type for a better usage
+ */
 public class DefaultPacket<T> implements Packet {
 
     private final T type;

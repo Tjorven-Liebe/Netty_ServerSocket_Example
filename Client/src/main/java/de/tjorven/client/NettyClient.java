@@ -1,6 +1,9 @@
-package de.tjorven;
+package de.tjorven.client;
 
-import de.tjorven.packet.DefaultPacket;
+import de.tjorven.coder.PacketDecoder;
+import de.tjorven.coder.PacketEncoder;
+import de.tjorven.example.NiceObject;
+import de.tjorven.packet.packets.DefaultPacket;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -30,9 +33,11 @@ public class NettyClient {
                 }
             });
             ChannelFuture sync = bootstrap.connect("localhost", 8080).sync();
+
+            //Send packets
             sync.channel().writeAndFlush(new DefaultPacket<>("test", "testType")).sync();
             sync.channel().writeAndFlush(new DefaultPacket<>("test", 500)).sync();
-            sync.channel().writeAndFlush(new DefaultPacket<>("test", new TollesObject("Test", 50))).sync();
+            sync.channel().writeAndFlush(new DefaultPacket<>("test", new NiceObject("Test", 50))).sync();
         } catch (Exception e) {
             worker.shutdownGracefully();
         }

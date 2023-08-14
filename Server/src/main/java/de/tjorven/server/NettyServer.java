@@ -1,7 +1,7 @@
 package de.tjorven.server;
 
-import de.tjorven.PacketDecoder;
-import de.tjorven.PacketEncoder;
+import de.tjorven.coder.PacketDecoder;
+import de.tjorven.coder.PacketEncoder;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -17,7 +17,7 @@ public class NettyServer {
         new NettyServer();
     }
 
-    public NettyServer() throws InterruptedException {
+    public NettyServer() {
         EventLoopGroup boss = new NioEventLoopGroup();
         EventLoopGroup worker = new NioEventLoopGroup();
         try {

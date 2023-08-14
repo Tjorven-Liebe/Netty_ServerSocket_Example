@@ -1,4 +1,5 @@
-rootProject.name = 'Netty'
+rootProject.name = 'Netty Example'
 include 'Client'
 include 'Core'
+include 'Server'
 

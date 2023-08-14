@@ -1,13 +1,16 @@
-package de.tjorven;
+package de.tjorven.example;
 
 import java.io.Serializable;
 
-public class TollesObject implements Serializable {
+/**
+ * Example object for showcase
+ */
+public class NiceObject implements Serializable {
 
     private final String test;
     private final int integer;
 
-    public TollesObject(String test, int integer) {
+    public NiceObject(String test, int integer) {
         this.test = test;
         this.integer = integer;
     }
