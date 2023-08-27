@@ -28,7 +28,7 @@ public class PacketSerializer {
 
 
     /**
-     * Conversion of a Packet into a Base64 string
+     * Conversion of a Base64 string into a Packet
      * @see CustomObjectInputStream CustomObjectOutputStream - if you miss objects after sending a Packet through the pipeline
      *
      * @param base64 the string to convert
